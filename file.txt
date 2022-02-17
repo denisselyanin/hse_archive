@@ -1,0 +1,52 @@
+<?xml version = "1.0"?>
+<ead>
+  <control>
+    <recordid id="BigProjectArchivalDataBase***.***.***"/>
+    <filedesc>
+        <titilestmt>
+      <titleproper>Archive</titleproper>
+          <titlestmt>
+      </fildesc>
+         <maintenancestatus value="new"/>
+          <maintenanceagency>
+            <agencyname>HSE</agencyname>
+          </maintenanceagency>
+          <maintenancehistory>
+            <maintenanceevent>
+              <eventtype value="created"/>
+              <eventdatetyme standarddatetime="2022-03-02T 10:05:232">
+                15 января
+              </eventdatetyme>
+              <agenttype value="machine"/>
+              <agent>BigProject</agent>
+              </maintenanceevent>
+          </maintenancehistory>
+  </control>
+      
+   <archdsc level="file">
+     <did>
+       <abstract>Возможно, содержание поля "описание дела"
+       </abstract>
+       
+       <unittitle>Название дела</unittitle>
+       <unitid>File***</unitid>
+       <daoset coverage="whole">
+         <dao daotype="borndigital" id=""/>
+       </daoset>
+       
+       <didnote>
+         <ref href="">
+           //ссылка
+         </ref>
+       </didnote>
+     </did>
+     
+     <scopecontent>
+       Возможно, ,более подробное содержание поля "описание дела"
+     </scopecontent>
+     <dsc>
+       <c/>
+         <c/>
+     </dsc>
+    </archdsc>
+</ead>
