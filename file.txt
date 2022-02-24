@@ -3,9 +3,9 @@
   <control>
     <recordid id="BigProjectArchivalDataBase***.***.***"/>
     <filedesc>
-        <titilestmt>
+        <titlestmt>
       <titleproper>Archive</titleproper>
-          <titlestmt>
+          </titlestmt>
       </fildesc>
          <maintenancestatus value="new"/>
           <maintenanceagency>
