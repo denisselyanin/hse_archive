@@ -21,6 +21,12 @@
               <agent>BigProject</agent>
               </maintenanceevent>
           </maintenancehistory>
+      <localcontrol localtype="casearchivist">
+        <term>имя сдатчика</term>
+      </localcontrol>
+      <localcontrol localtype="archivist"/>
+        <term>имя архивиста</term>
+      </localcontrol>
   </control>
       
    <archdsc level="file">
