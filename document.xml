@@ -31,6 +31,54 @@
       <origination localtype="orginalcreator">кто создал</origination>
       <origination localtype="hseres">создание цифрового образа</origination>
       <physloc>местонахождение оригинального документа</physloc>
+      <repository>
+        <corpname>право доступа к документу</corpname>
+      </repository>
+      <unittitle>название документа</unittitle>
+      <unitdate normal="YYYY-MM-DD, YYYYMMDD, YYYY/YYYY" label="creationdate">11/22/1982</unitdate>
+      <unitdate normal="YYYY-MM-DD, YYYYMMDD, YYYY/YYYY" label="digitalcopycreationdate">11/22/2022</unitdate>
+      <unitid>doc###</unitid>
      </did>
+    <controlaccess>
+      <genreform localtype="documenttype">
+        <part>тип документа</part>
+      </genreform>
+      <genreform localtype="original">
+        <part>оригинал/копия</part>
+      </genreform>
+      <corpname localtype="internalcorpindex">
+        <part>название организации</part>
+      </corpname>
+      <persname localtype="internalpersindex">
+        <part>имя</part>
+      </persname>
+    </controlaccess>
+    <relatedmaterial>
+      <head>родительский документ</head>
+      <archref id="parentdocid">номер и название родительского документа,
+        <ref href="ead-parentdoclink">ссылка на ead-документ для родительского документа</ref>
+      </archref>
+      <head>связанные дела</head>
+      <archref id="relatedfileid">номер и название связанного дела,
+        <ref href="ead-filelink">ссылка на ead-документ для дела</ref>
+      </archref>
+      <head>связанные документы</head>
+      <archref id="relateddocid">номер и название связанного документа,
+        <ref href="ead-doclink">ссылка на ead-документ для документа</ref>
+      </archref>
+    </relatedmaterial>
+    <dsc>
+      <head>подчиненные документы</head>
+      <c level="item">
+       <did>
+        <unittitle>название документа</unittitle>
+        <unitdate normal="YYYY-MM-DD, YYYYMMDD, YYYY/YYYY" label="creationdate">11/22/1982</unitdate>
+        <unitdate normal="YYYY-MM-DD, YYYYMMDD, YYYY/YYYY" label="digitalcopycreationdate">11/22/2022</unitdate>
+        <archref id="childdocid">номер и название подчиненного документа,
+           <ref href="ead-childdoclink">ссылка на ead-документ для подчиненного документа</ref>
+        </archref>
+       </did>
+      </c>
+    </dsc>
     </arcdesc>
 </ead>
