@@ -1,0 +1,36 @@
+<ead>
+  <control>
+    <recordid id="BigProjectArchivalDataBaseDOC****"/>
+    <filedesc>
+      <titlestmt>
+        <titleproper>Указатель архива проекта "Социальная антропология институтов позднего СССР"</titleproper>
+        <subtitle>Указатель документов проекта</subtitle>
+        </titlestmt>
+      </filedesc>
+    <maintenancestatus value="new"/>
+    <maintenanceagency>
+      <agencyname>HSE</agencyname>
+      </maintenanceagency>
+    <localcontrol localtype="encoded">
+      <term>encoded/not encoded</term>
+    </localcontrol>
+    <maintenancehistory>
+      <eventtype value="created/updated/revised"></eventtype>
+      <eventdatetime standarddatetime="2017-03-01T08:05:33Z">March 1 2017</eventdatetime>
+      <agenttype value="machine"/>
+      <agent>Big Project</agent>
+      </maintenancehistory>
+  </control>
+
+  <archdesc level="document">
+    <did>
+      <!--<daoset>
+      <dao daotype="borndigital"/>
+      </daoset>-->
+      <didnote localtype="number">###</didnote>
+      <origination localtype="orginalcreator">кто создал</origination>
+      <origination localtype="hseres">создание цифрового образа</origination>
+      <physloc>местонахождение оригинального документа</physloc>
+     </did>
+    </arcdesc>
+</ead>
