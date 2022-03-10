@@ -1,58 +1,55 @@
 <?xml version = "1.0"?>
 <ead>
   <control>
-    <recordid id="BigProjectArchivalDataBase***.***.***"/>
+    <recordid id="BigProjectArchivalDataBase***.***.***"/> <!--Используем префикс (стандартный для нашей базы) BigProjectArchivalDataBase, дополняем его числовыми значениями
+полей фонд, опись, дело-->
     <filedesc>
         <titlestmt>
-      <titleproper>Archive</titleproper>
+      <titleproper>Указатель цифрового архива проекта «Социальная антропология институтов позднего СССР»</titleproper> <!--Название указателя-->
           </titlestmt>
       </fildesc>
-         <maintenancestatus value="new"/>
-          <maintenanceagency>
+         <maintenancestatus value="new"/> <!--При создании документа value всегда new, при изменении файла меняется на revised-->
+          <maintenanceagency> <!--ВШЭ-->
             <agencyname>HSE</agencyname>
           </maintenanceagency>
-          <maintenancehistory>
-            <maintenanceevent>
-              <eventtype value="created"/>
-              <eventdatetyme standarddatetime="2022-03-02T 10:05:232">
+          <maintenancehistory> <!--История работы с файлом-->
+            <maintenanceevent> <!--Первый ивент появляется при создании, далее новые (с value=updated) появляются при каждом обновлении файла, с ним добавляем дату-->
+              <eventtype value="created"/> <!--Создание ead-файла дела-->
+              <eventdatetyme standarddatetime="2022-03-02T 10:05:232"> <!--Дата создания (или обновления при value=updated) файла-->
                 15 января
               </eventdatetyme>
-              <agenttype value="machine"/>
-              <agent>BigProject</agent>
+              <agenttype value="machine"/> <!--Всегда value=machine-->
+              <agent>BigProject</agent> <!--BigProject как название системы-->
               </maintenanceevent>
           </maintenancehistory>
-      <localcontrol localtype="casearchivist">
-        <term>имя сдатчика</term>
+      <localcontrol localtype="casearchivist"> 
+        <term>имя сдатчика</term> <!--Вставить из ячейки имя сдатчика-->
       </localcontrol>
-      <localcontrol localtype="archivist"/>
-        <term>имя архивиста</term>
+      <localcontrol localtype="archivist"/> 
+        <term>имя архивиста</term> <!--Вставить из ячейки имя архивиста-->
       </localcontrol>
   </control>
       
    <archdsc level="file">
      <did>
-       <abstract>Возможно, содержание поля "описание дела"
-       </abstract>
-       
-       <unittitle>Название дела</unittitle>
-       <unitid>File***</unitid>
-       <daoset coverage="whole">
-         <dao daotype="borndigital" id=""/>
+       <unittitle>Название дела</unittitle> <!--Вставить из ячейки название дела-->
+       <unitid>File***.***.***</unitid> <!--Числовой id дела в виде File***, где *** - числовые значения фонда, описи, дела -->
+       <daoset coverage="whole"> <!--Прикрепленные файлы, каждый внутренний тег dao соответствует одному файлу-->
+         <dao daotype="borndigital" id=""/> <!--id - название файла, всегда borndigital-->
        </daoset>
        
-       <didnote>
-         <ref href="">
+       <didnote> <!--Нужен, если есть url-ссылка-->
+         <ref href=""> <!Непосредственно сама ссылка, используем два раза: как атрибут href и в теле тега-->
            //ссылка
          </ref>
        </didnote>
      </did>
      
-     <scopecontent>
+     <scopecontent> <!--Вставить из ячейки описание дела-->
        Возможно, ,более подробное содержание поля "описание дела"
      </scopecontent>
-     <dsc>
-       <c/>
-         <c/>
+     <dsc> <!--Прикрепленные документы, для каждого отдельный тег c-->
+       <c/> <!--Содержит сокращенную версию ead-файла документа-->
      </dsc>
     </archdsc>
 </ead>
