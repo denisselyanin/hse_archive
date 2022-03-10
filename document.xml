@@ -20,6 +20,7 @@
       <agenttype value="machine"/>
       <agent>Big Project</agent>
       </maintenancehistory>
+    <localcontrol localtype="digitalcopyauthor">автор цифрового образа</localcontrol>
   </control>
 
   <archdesc level="document">
@@ -80,5 +81,9 @@
        </did>
       </c>
     </dsc>
+    <accessrestrict audience="external">
+      <head>статус публикации</head>
+       <p>документ опубликован ДАТА_ПУБЛИКАЦИИ по ссылке: ССЫЛКА НА ПУБЛИКАЦИЮ</p>
+    </accessrestrict>
     </arcdesc>
 </ead>
