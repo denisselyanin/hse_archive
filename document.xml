@@ -1,89 +1,92 @@
 <ead>
   <control>
-    <recordid id="BigProjectArchivalDataBaseDOC****"/>
+    <recordid id="BigProjectArchivalDataBaseDOC****"/> <!--Используем префикс (стандартный для нашей базы) BigProjectArchivalDataBase, дополняем его числовым значением id документа-->
     <filedesc>
       <titlestmt>
-        <titleproper>Указатель архива проекта "Социальная антропология институтов позднего СССР"</titleproper>
+        <titleproper>Указатель архива проекта "Социальная антропология институтов позднего СССР"</titleproper> <!--Название указателя-->
         <subtitle>Указатель документов проекта</subtitle>
         </titlestmt>
       </filedesc>
-    <maintenancestatus value="new"/>
-    <maintenanceagency>
+    <maintenancestatus value="new"/> <!--При создании документа value всегда new, при изменении файла меняется на revised-->
+    <maintenanceagency> 
       <agencyname>HSE</agencyname>
       </maintenanceagency>
-    <localcontrol localtype="encoded">
-      <term>encoded/not encoded</term>
+    <localcontrol localtype="encoded"> <!--кодирован ли документ-->
+      <term>encoded/not encoded</term> <!--одно из двух значений-->
     </localcontrol>
-    <maintenancehistory>
-      <eventtype value="created/updated/revised"></eventtype>
-      <eventdatetime standarddatetime="2017-03-01T08:05:33Z">March 1 2017</eventdatetime>
-      <agenttype value="machine"/>
-      <agent>Big Project</agent>
-      </maintenancehistory>
-    <localcontrol localtype="digitalcopyauthor">автор цифрового образа</localcontrol>
+    <maintenancehistory> <!--история работы с документом-->
+      <maintenanceevent> <!--при каждом изменении ead-записи создается новый maintenanceevent со всеми вложенными тегами-->
+      <eventtype value="created"/> <!--статус ead-записи. при создании "created", "updated" иначе. атрибут меняется при изменении ead-записи-->
+      <eventdatetime standarddatetime="2017-03-01T08:05:33Z">March 1 2017</eventdatetime> <!--время последнего изменения-->
+      <agenttype value="machine"/> 
+      <agent>Big Project</agent> 
+     </maintenanceevent> 
+    </maintenancehistory>
+    <localcontrol localtype="digitalcopyauthor">автор цифрового образа</localcontrol> <!--значение внутри тега подставляется из переменных-->
   </control>
 
   <archdesc level="document">
     <did>
-      <!--<daoset>
-      <dao daotype="borndigital"/>
-      </daoset>-->
-      <didnote localtype="number">###</didnote>
-      <origination localtype="orginalcreator">кто создал</origination>
-      <origination localtype="hseres">создание цифрового образа</origination>
-      <physloc>местонахождение оригинального документа</physloc>
+      <daoset> <!--для каждого файла создается отдельный dao-->
+        <dao daotype="borndigital" coverage="part" show="new" linktitle="Annual Report: 1999" 
+        href="https://"/> <!--coverage="whole", если к документу приложен единственный файл, "part" иначе; linktitle - название файла, href - ссылка на файл-->
+      </daoset>
+      <didnote localtype="number">###</didnote> <!--номер документа в деле-->
+      <origination localtype="orginalcreator">кто создал</origination> <!--значение внутри тега подставляется из переменных-->
+      <origination localtype="hseres">создание цифрового образа</origination> <!--значение внутри тега подставляется из переменных-->
+      <physloc>местонахождение оригинального документа</physloc> <!--значение внутри тега подставляется из переменных-->
       <repository>
-        <corpname>право доступа к документу</corpname>
+        <corpname>право доступа к документу</corpname> <!--значение внутри тега подставляется из переменных-->
       </repository>
-      <unittitle>название документа</unittitle>
-      <unitdate normal="YYYY-MM-DD, YYYYMMDD, YYYY/YYYY" label="creationdate">11/22/1982</unitdate>
-      <unitdate normal="YYYY-MM-DD, YYYYMMDD, YYYY/YYYY" label="digitalcopycreationdate">11/22/2022</unitdate>
-      <unitid>doc###</unitid>
+      <unittitle>название документа</unittitle> <!--значение внутри тега подставляется из переменных-->
+      <unitdate normal="YYYY-MM-DD, YYYYMMDD, YYYY/YYYY" label="creationdate">11/22/1982</unitdate> <!--значение внутри тега подставляется из переменных-->
+      <unitdate normal="YYYY-MM-DD, YYYYMMDD, YYYY/YYYY" label="digitalcopycreationdate">11/22/2022</unitdate> <!--значение внутри тега подставляется из переменных-->
+      <unitid>doc###</unitid> <!--числовое значение id документа вместо трех хэшей(подставляется из переменных)-->
      </did>
-    <controlaccess>
+    <controlaccess> <!--на каждый тип документа создается отдельная запись-->
       <genreform localtype="documenttype">
-        <part>тип документа</part>
+        <part>тип документа</part> <!--значение внутри тега подставляется из переменных-->
       </genreform>
       <genreform localtype="original">
-        <part>оригинал/копия</part>
+        <part>оригинал/копия</part> <!--значение внутри тега подставляется из переменных-->
       </genreform>
       <corpname localtype="internalcorpindex">
-        <part>название организации</part>
+        <part>название организации</part> <!--значение внутри тега подставляется из переменных-->
       </corpname>
       <persname localtype="internalpersindex">
-        <part>имя</part>
+        <part>имя</part> <!--значение внутри тега подставляется из переменных-->
       </persname>
     </controlaccess>
-    <relatedmaterial>
-      <head>родительский документ</head>
+    <relatedmaterial> <!--создается, если есть связанные документы/дела-->
+      <head>родительский документ</head> <!--создается, если есть родительские документы-->
       <archref id="parentdocid">номер и название родительского документа,
-        <ref href="ead-parentdoclink">ссылка на ead-документ для родительского документа</ref>
+        <ref href="ead-parentdoclink">ссылка на ead-документ для родительского документа</ref> <!--значение внутри тега подставляется из переменных-->
       </archref>
-      <head>связанные дела</head>
+      <head>связанные дела</head> <!--создается, если есть связанные дела-->
       <archref id="relatedfileid">номер и название связанного дела,
-        <ref href="ead-filelink">ссылка на ead-документ для дела</ref>
+        <ref href="ead-filelink">ссылка на ead-документ для дела</ref> <!--значение внутри тега подставляется из переменных-->
       </archref>
-      <head>связанные документы</head>
+      <head>связанные документы</head> <!--создается, если есть связанные документы-->
       <archref id="relateddocid">номер и название связанного документа,
-        <ref href="ead-doclink">ссылка на ead-документ для документа</ref>
+        <ref href="ead-doclink">ссылка на ead-документ для документа</ref> <!--значение внутри тега подставляется из переменных-->
       </archref>
     </relatedmaterial>
-    <dsc>
-      <head>подчиненные документы</head>
+    <dsc> <!--создается, если есть подчиненные документы-->
+      <head>подчиненные документы</head> 
       <c level="item">
        <did>
-        <unittitle>название документа</unittitle>
-        <unitdate normal="YYYY-MM-DD, YYYYMMDD, YYYY/YYYY" label="creationdate">11/22/1982</unitdate>
-        <unitdate normal="YYYY-MM-DD, YYYYMMDD, YYYY/YYYY" label="digitalcopycreationdate">11/22/2022</unitdate>
+        <unittitle>название документа</unittitle> <!--значение внутри тега подставляется из из подчиненного документа-->
+        <unitdate normal="YYYY-MM-DD, YYYYMMDD, YYYY/YYYY" label="creationdate">11/22/1982</unitdate> <!--значение внутри тега подставляется из подчиненного документа-->
+        <unitdate normal="YYYY-MM-DD, YYYYMMDD, YYYY/YYYY" label="digitalcopycreationdate">11/22/2022</unitdate> <!--значение внутри тега подставляется из подчиненного документа-->
         <archref id="childdocid">номер и название подчиненного документа,
-           <ref href="ead-childdoclink">ссылка на ead-документ для подчиненного документа</ref>
+           <ref href="ead-childdoclink">ссылка на ead-документ для подчиненного документа</ref> <!--значение внутри тега подставляется из подчиненного документа-->
         </archref>
        </did>
       </c>
     </dsc>
-    <accessrestrict audience="external">
+    <accessrestrict audience="external"> 
       <head>статус публикации</head>
-       <p>документ опубликован ДАТА_ПУБЛИКАЦИИ по ссылке: ССЫЛКА НА ПУБЛИКАЦИЮ</p>
+       <p>документ опубликован ДАТА_ПУБЛИКАЦИИ по ссылке: ССЫЛКА НА ПУБЛИКАЦИЮ</p> <!--значение внутри тега подставляется из переменных-->
     </accessrestrict>
     </arcdesc>
 </ead>
